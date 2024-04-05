@@ -1,0 +1,9 @@
+name: MetabolicNetworks
+channels:
+  - defaults
+dependencies:
+  - numpy
+  - scipy
+  - numba
+  - matplotlib
+  - jupyterlab
