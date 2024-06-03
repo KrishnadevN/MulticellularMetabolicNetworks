@@ -1,9 +1,6 @@
-name: MetabolicNetworks
+name: MulticellularMetabolicNetworks
 channels:
   - defaults
 dependencies:
   - numpy
-  - scipy
   - numba
-  - matplotlib
-  - jupyterlab
