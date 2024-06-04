@@ -1,6 +1,0 @@
-name: MulticellularMetabolicNetworks
-channels:
-  - defaults
-dependencies:
-  - numpy
-  - numba
