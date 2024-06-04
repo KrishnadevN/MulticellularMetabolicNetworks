@@ -31,7 +31,7 @@ With `meanfield.py` in `pythonpath`, one could import the function `meanfield` a
     vals = meanfield(beta_g, beta_o)
     part, gluc, ox, lact = vals.Zp, vals.ug, vals.uo, vals.ul
 
-For evaluating quantities in the ${\beta_O}-{\beta_G}$ plane, pass the values of parameters as one-dimensional arrays, with an additional argument `grid=True`. For `M` values of $\beta_G$ and `N` values of $\beta_O$, the output arrays have the shape `M×N`
+For evaluating quantities in the $\beta_O{-}\beta_G$ plane, pass the values of parameters as one-dimensional arrays, with an additional argument `grid=True`. For `M` values of $\beta_G$ and `N` values of $\beta_O$, the output arrays have the shape `M×N`
 
     beta_g = np.arange(-12., 2., 0.1 + noise) + noise
     beta_o = np.arange(- 5., 5., 0.1 + noise) + noise
