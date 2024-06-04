@@ -116,12 +116,15 @@ def meanfield(βg, βo, grid=False):
             grid = True
     else:
         grid = False
+    βg, βo = np.atleast_1d(βg), np.atleast_1d(βo)
     if grid:
         βg, βo = np.broadcast_arrays(βg[:,None], βo[None,:])
     else:
         βg, βo = np.broadcast_arrays(βg, βo)
-
-    Z, dZg, dZo, φ, p = _meanfield(βg, βo)
+    values = _meanfield(βg, βo)
+    Z, dZg, dZo, φ, p = values
+    if np.squeeze(Z).ndim==0:
+        Z, dZg, dZo, φ, p = (value.item() for value in values)
     Zp = Z * np.exp(p*φ)
 
     ug = dZg/Z
